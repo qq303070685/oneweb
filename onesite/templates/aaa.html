@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+        <head>
+                <meta charset="utf-8" />
+                <title>Hello</title>
+
+                <link rel="stylesheet" href="../static/js/kindeditor-4.1.11-zh-CN/themes/default/default.css" />
+                <script charset="utf-8" src="../static/js/kindeditor-4.1.11-zh-CN/kindeditor-all-min.js"></script>
+                <script charset="utf-8" src="../static/js/kindeditor-4.1.11-zh-CN/lang/zh-CN.js"></script>
+                <script>
+
+                        KindEditor.ready(function(K) {
+                                K.create('#editor_id', {
+                                       
+                                });
+                        });
+                </script>
+        </head>
+        <body>
+                <form method="GET">
+                       <textarea id="editor_id" name="content" value='cccccc' style="width:700px;height:300px;">bbbbb</textarea>
+                       <input type="submit" value="tijiao"> 
+                </form>
+                <textarea id="editor" name="content" value='cccccc' style="width:700px;height:300px;">bbbbb</textarea>
+                <input type="text" name="content" value="aaaaa"/>  
+        </body>
+</html>

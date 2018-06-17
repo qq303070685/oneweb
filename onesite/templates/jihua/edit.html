@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+      <div class="newribao"> 
+        <!-- Box -->
+        <div class="box"> 
+          <!-- Box Head -->
+          <div class="box-head">
+            <h3>新建日报</h3>
+          </div>
+          <!-- End Box Head -->
+          <div class="box-body">
+	          <form action="" method="post">
+	            {% csrf_token %}
+	            <!-- Form -->
+	            <div class="newform">
+	              <p >
+	                <label for="time">日期：</label>
+	                {{ new_content.date }}
+	                <!-- <input class="time" type="date" name="date"/> -->
+	              </p>
+	              <p class="inline-field">
+	                <label>客户名称:</label>
+	                {{ new_content.customer_name }}
+	                <!--input type="input" class="name" name='customer_name' /-->
+	                <label>DFE型号</label>
+	                <!--select class="dfetype">
+	                  <option value="">Pro</option>
+	                  <option value="">Esko</option>
+	                  <option value="">PM</option>
+	                  <option value="">无</option>
+	                </select-->
+	                {{ new_content.dfe_name }}
+	              </p>
+	              <p>
+	                <label style="display: block;">问题描述:</label>
+	                {{ new_content.question }}
+	                <!--textarea class="file" rows="2" cols="120" name='question'></textarea-->
+	              </p>
+	              <p>
+	                <label style="display: block;">解决方法:</label>
+	                {{ new_content.solution }}
+	              	<!--textarea class="file" rows="7" cols="120" name='solution'></textarea-->
+	              </p>
+	              <p class="bujian">
+	                <label>是否解决</label>
+	                <!--select class="field size2">
+	                  <option value="">已解决</option>
+	                  <option value="">暂未解决</option>
+	                </select-->
+	                {{ new_content.solution_or_not }}
+	                <label style="margin-left: 45px; ">是否升级HP</label>
+	                <!--input type="checkbox" class="field size1" /-->
+	                {{ new_content.update_or_not }}
+	                <label style="margin-left: 45px; ">是否更换备件</label>
+	                <!--select class="field size2">
+	                  <option value="">无</option>
+	                  <option value="">库房申请</option>
+	                  <option value="">小库申请</option>
+	                  <option value="">HP提供</option>
+	                  <option value="">第三方购买</option>
+	                </select-->
+	                {{ new_content.change_or_not }}
+	                <label style="margin-left: 45px; ">是否分享</label>
+	                <!--input type="checkbox" class="field size1" /-->
+	                {{ new_content.share_or_not }}
+	                {{ new_content.author }}
+	              </p>
+	            </div>
+	          
+	          
+	              <!-- Form Buttons -->
+	            <div class="buttons">
+	              <input type="submit" class="button" value="保存" />
+	            </div>
+	            <!-- End Form Buttons -->
+	          </form>
+	            <!-- End Form --> 
+          </div>
+            
+           
+        </div>
+        <!-- End Box --> 
+      </div>
+{% endblock content %}

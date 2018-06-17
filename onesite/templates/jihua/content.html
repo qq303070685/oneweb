@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+	
+	{% block content %}
+      <div class="newribao"> 
+        <!-- Box -->
+        <div class="box"> 
+          <!-- Box Head -->
+          <div class="box-head">
+            <h3>{{ content.question }}</h3>
+            <br>
+          </div>
+          <!-- End Box Head -->
+          <div class="box-body">
+            <!-- Form -->
+            <div class="newform">
+              <p >
+                <label for="time">{{ content.date }}</label>
+              </p>
+              <p class="inline-field">
+                <label>客户名称:</label>
+                <label>{{ content.customer_name }}</label>
+                
+                <label>DFE型号:{{ content.dfe_name }}</label>
+              </p>
+             
+              <p>
+                <label style="display: block;">解决方法:</label>
+              </p>
+              <p>
+              	{{ content.solution | safe }}
+              </p>
+              <p class="bujian">
+                <label>是否解决:{{ content.solution_or_not }}</label>
+                <select class="field size2">
+                  <option value="">已解决</option>
+                  <option value="">暂未解决</option>
+                </select>
+                <label style="margin-left: 45px; ">是否升级HP:{{ content.update_or_not }}</label>
+                <input type="checkbox" class="field size1" />
+                <label style="margin-left: 45px; ">是否更换备件:{{ content.change_or_not }}</label>
+                <select class="field size2">
+                  <option value="">无</option>
+                  <option value="">库房申请</option>
+                  <option value="">小库申请</option>
+                  <option value="">HP提供</option>
+                  <option value="">第三方购买</option>
+                </select>
+                <label style="margin-left: 45px; ">是否分享:{{ content.share_or_not }}</label>
+                <input type="checkbox" class="field size1" />
+              </p>
+            </div>
+          
+          
+              <!-- Form Buttons -->
+            <div class="buttons">
+            <a type="button" class="button" href="{% url 'edit' content.id %}" > 编辑 </a>
+            </div>
+            <!-- End Form Buttons -->
+        
+            <!-- End Form --> 
+          </div>
+            
+           
+        </div>
+        <!-- End Box --> 
+      </div>
+	{% endblock content %}

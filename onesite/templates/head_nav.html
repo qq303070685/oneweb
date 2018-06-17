@@ -1,0 +1,26 @@
+{% load staticfiles %}
+<div class="aa">
+	<div class="header">
+		<div class="logo"><a href="#"><img src="{% static 'images/logo.png' %}" alt=""></a></div>
+		<ul>
+			<li><a href="#">首页</a></li>
+			<li><a href="#">总结</a></li>
+			<li><a href="#">日报</a></li>
+		</ul>
+		<div class="search">
+			<form action="{% url 'search' %}" method="get">
+				{% csrf_token %}
+				<input type="text" class="text" name="q" placeholder="搜索你感兴趣的内容...">
+				<input type="submit" value="" class="submit">
+			</form>
+		</div>
+		
+		<div class="touxiang">
+			{% if request.user.username %}
+			<a class="a_wz" href="#">您好&nbsp;&#44;&nbsp;{{request.user.username}}</a>
+			<a href="#"><img src="{% static 'images/touxiang-3.png' %}" alt="" class="img"></a>
+			<a href="{% url 'logout' %}" class="logout">退出登录</a>
+			{% endif %}
+		</div>
+	</div>
+</div>

@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+					{% block ribao_nav %}
+					<div class="jihua_m_s">
+						<div><h3>我的日报</h3></div>
+						<!-- <div><h5>2018年4月21日（星期六）</h5></div> -->
+						<div class="sort">
+							<label>排序</label>
+							<select class="field">
+								<option value="" selected="">日期</option>
+								<option value="">工程师</option>
+								<option value="">客户</option>
+							</select>
+						</div>
+						<div><a href="{% url 'create' %}"><img src="{% static 'images/xinjianricheng.png' %}" alt=""></a></div>
+						
+					</div>
+					{% endblock ribao_nav %}
+
+					{% block ribao %}
+					<div class="jihua_m_x">
+						<table  class="table">
+						  <tbody >
+							<tr>
+							  <th scope="col" width="40">编号</th>
+							  <th scope="col" width="110">日期</th>
+							  <th scope="col" width="180">客户名称</th>
+							  <th scope="col" width="480">问题描述</th>
+							  <th scope="col" width="80">DFE型号</th>
+							  <th scope="col" width="80">是否解决</th>
+							  <th scope="col" width="70">分享文档</th>
+							  <th scope="col" width="70">工程师</th>
+							  <th scope="col" width="50"><a href="#" class="ico del"></a></th>
+							</tr>
+							{% for neirong in search_list %}
+							<tr>
+							  <td>{{ forloop.counter }}</td>
+							  <td>{{ neirong.date }}</td>
+							  <td>{{ neirong.customer_name }}</td>
+							  <td><a  class="table_con" href="{% url 'viewcontent' neirong.pk %}">{{ neirong.question }}</a></td>
+							  <td>{{ neirong.dfe_name }}</td>
+							  <td>{{ neirong.solution_or_not }}</td>
+							  <td>{{ neirong.share_or_not }}</td>
+							  <td>{{ neirong.author }}</td>
+							  <td><a href="{% url 'delete' neirong.pk %}" class="ico del">删除</a></td>
+							</tr>
+							{% endfor %}
+							
+						  </tbody>
+						</table>
+
+					</div>
+					{% endblock ribao %}
+
+					{% block paginator %}
+					<div class="fenye">
+						<ul>
+							<li><a href="?page=1">首页</a></li>
+							{% if content.has_previous %}
+							<li><a href="?page={{content.previous_page_number}}">上一页</a></li>
+							{% else %}
+							<li><a href="#" style="pointer-events: none; color:#666">上一页</a></li>
+							{% endif %}
+							<li><a href="#">第{{content.number}}页（共<span>{{content.paginator.num_pages}}</span>页）</a></li>
+							{% if content.has_next %}
+							<li><a href="?page={{content.next_page_number}}">下一页</a></li>
+							{% else %}
+							<li><a href="#" style="pointer-events: none; color:#666"">下一页</a></li>
+							{% endif %}
+							<li><a href="?page={{content.paginator.num_pages}}">末页</a></li>
+						</ul>
+					</div>
+					{% endblock paginator %}

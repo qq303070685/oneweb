@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>登陆</title>
+<style>
+	*{padding: 0; margin: 0;}
+	input{ outline: none;}
+	body{ font-family: "微软雅黑"," 宋体"," 黑体"; background-color: rgba(82, 129, 163,0.4);}
+	
+	/*公用*/
+	.login{ width: 450px; height: 360px; background: #ffffff; margin: 8% auto; border-radius: 15px; box-shadow: 0 0 5px 5px rgba(0,0, 0, 0.2);}
+	.login .logo{  height: 70px; width: 450px;text-align: center;}
+	.login .logo img{ margin-top: 14px;}
+	/**/
+	.login .bonner{ width: 490px; height: 55px; background: rgb(162, 14, 34); margin-left: -20px; }
+	.login .bonner p{ font-size: 25px; color: aliceblue; font-family: "Arial"; font-weight: 600; margin-left: 60px; line-height: 55px;}
+	.login .jiao1{ width: 0; height: 0; border-top: 20px solid rgb(27, 27, 27); border-left: 20px solid transparent; border-bottom: 20px solid transparent;  margin-left:-20px;}
+	.login .jiao2{ width: 0; height: 0; border-top: 20px solid rgb(27, 27, 27); border-left: 20px solid transparent; border-bottom: 20px solid transparent; margin-top: -50px; margin-left: 460px; transform: rotate(-90deg);}
+	/**/
+	.login .name{ width: 350px; height: 40px; border: 1px solid #807B7B; border-radius: 5px; margin: 0 auto; margin-bottom: 10px; }
+	.login .name:hover{ border: 1px solid #F3090D;}
+	.login .name img{ display:block; float: left; margin: 6px;}
+	.login .name input{ display: block; float: left; height: 34px; width: 250px; font-size: 18px; margin-left: 5px; margin-top: 2px; border: none;}
+	/**/
+	.login .pw{ width: 350px; height: 40px; border: 1px solid #807B7B; border-radius: 5px; margin: 0 auto; margin-bottom: 10px;}
+	.login .pw:hover{ border: 1px solid #F3090D;}
+	.login .pw img{display:block; float: left; margin: 6px;}
+	.login .pw input{ display: block; float: left; height: 34px; width: 250px; font-size: 18px; margin-left: 5px; margin-top: 2px; border: none;}
+	/**/
+	.login .button button{ width: 80px; height: 40px;  cursor: pointer; background: rgb(162, 14, 34); color: #ffffff; border: none;border-radius: 20px; margin-left: 146px;}
+	.login .button button:hover{ background: #F3090D;}
+	.login .button span{ font-size: 17px;}
+	.login .button input{ margin-left: 50px;}
+</style>
+</head>
+
+<body>
+<div class="login">
+	<div class="logo">
+		<img src="../static/images/logo.png" alt="#">
+	</div>
+	<div class="bonner">
+		<p>Login</p>
+	</div>
+	<div class="jiao1"></div>
+	<div class="jiao2"></div>
+	<form action="#" method="POST">
+		{% csrf_token %}
+		<div class="name">
+			<img src="../static/images/icons8-编辑男性用户-26.png" alt="">
+			<!--input type="text" id="username" placeholder="请输入用户名"-->
+			{{ login_form.username }}
+		</div>
+		<div class="pw">
+			<img src="../static/images/icons8-隐私-26.png" alt="">
+			<!--input type="text" id="password" placeholder="请输入密码"-->
+			{{ login_form.password }}
+		</div>
+		<br/>
+		<div class="button">
+			<input type="checkbox" value="1" name='saved'>
+			<span class="jizhu">下次自动登陆</span>
+			<button type="submit" ><span>登陆</span></button>
+		</div>
+	</form>
+</div>
+
+</body>
+</html>

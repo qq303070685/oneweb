@@ -1,0 +1,66 @@
+.main .main_l_r .newribao
+{
+    width: 1160px;
+    height: 540px;
+    margin-bottom: 15px;
+
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 3px 8px rgba(0,0, 0, .3);
+}
+
+.main .main_l_r .newribao .box-head h3
+{
+    line-height: 50px;
+
+    width: 1140px;
+    height: 50px;
+    padding-left: 20px;
+
+    color: #fff;
+    border-radius: 6px;
+    background: rgb(0, 89, 153);
+}
+.main .main_l_r .newribao .box-head .newform
+{
+    background: #000;
+}
+.main .main_l_r .newribao .box-body
+{
+    margin: 18px 18px;
+}
+.main .main_l_r .newribao .box-body p
+{
+    margin-bottom: 10px;
+}
+.main .main_l_r .newribao .box-body .inline-field input
+{
+    width: 300px;
+    height: 25px;
+    margin-right: 40px;
+}
+.main .main_l_r .newribao .box-body .inline-field .dfetype
+{
+    width: 100px;
+    height: 25px;
+}
+
+.main .main_l_r .newribao .box-body textarea
+{
+    margin-top: 10px;
+
+    fongt-size: 15px;
+}
+.main .main_l_r .newribao .box-body .bujian select
+{
+    height: 25px;
+}
+.main .main_l_r .newribao .box-body .button
+{
+    width: 60px;
+    height: 30px;
+    margin-top: 10px;
+    margin-right: 10px;
+
+    border-radius: 5px;
+}

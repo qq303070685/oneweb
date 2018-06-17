@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jihua_con</title>
+<link rel="stylesheet" href="webstyle.css">
+<link rel="stylesheet" href="jihuastyle.css">
+<link rel="stylesheet" href="jihuastyle_input.css">
+</head>
+
+<body>
+<div class="aa">
+  <div class="header">
+	<div class ="logo"><a href="#"><img src="../static/images/logo.png" alt=""></a></div>
+    <ul>
+      <li><a href="#">首页</a></li>
+      <li><a href="#">总结</a></li>
+      <li><a href="#">日报</a></li>
+    </ul>
+	<div class ="search">
+      <form action="#">
+        <input type="text" class="text" placeholder="搜索你感兴趣的内容...">
+        <input type="submit" value="" class="submit">
+      </form>
+    </div>
+    <div class="touxiang"> <a class="a_wz" href="#">您好&nbsp;&#44;&nbsp;六六六</a> <a href="#"><img src="../static/images/touxiang-3.png" alt="" class="img"></a> <a href="#" class="logout">退出登录</a> </div>
+  </div>
+</div>
+<div class="main">
+  <div class="main_r">
+    <ul>
+      <li><a href="#"><img src="../static/images/icons8-首页-32_white.png" alt=""></a>
+        <div><a class="text" href="#">首页</a></div>
+      </li>
+      <li><a href="#"><img src="../static/images/icons8-项目符号列表-32_white.png" alt=""></a>
+        <div><a class="text" href="#">工作计划</a></div>
+      </li>
+      <li><a href="#"><img src="../static/images/icons8-编辑属性-32_white.png" alt=""></a>
+        <div><a class="text" href="#">总结</a></div>
+      </li>
+      <li><a href="#"><img src="../static/images/icons8-缩略图-32_white.png" alt=""></a>
+        <div><a class="text" href="#">其他</a></div>
+      </li>
+    </ul>
+  </div>
+  <div class="main_l">
+    <div class="main_l_r">
+      <div class="newribao"> 
+        <!-- Box -->
+        <div class="box"> 
+          <!-- Box Head -->
+          <div class="box-head">
+            <h3>新建日报</h3>
+          </div>
+          <!-- End Box Head -->
+          <div class="box-body">
+	          <form action="" method="post">
+	            
+	            <!-- Form -->
+	            <div class="newform">
+	              <p >
+	                <label for="time">日期：</label>
+	                <input class="time" type="date" value="2018-04-23"/>
+	              </p>
+	              <p class="inline-field">
+	                <label>客户名称</label>
+	                <input type="input" class="name" />
+	                <label>DFE型号</label>
+	                <select class="dfetype">
+	                  <option value="">Pro</option>
+	                  <option value="">Esko</option>
+	                  <option value="">PM</option>
+	                  <option value="">无</option>
+	                </select>
+	              </p>
+	              <p>
+	                <label style="display: block;">问题描述</label>
+	                <textarea class="file" rows="2" cols="120"></textarea>
+	              </p>
+	              <p>
+	                <label style="display: block;">解决方法</label>
+	              	<textarea class="file" rows="7" cols="120"></textarea>
+	              </p>
+	              <p class="bujian">
+	                <label>是否解决</label>
+	                <select class="field size2">
+	                  <option value="">已解决</option>
+	                  <option value="">暂未解决</option>
+	                </select>
+	                <label style="margin-left: 45px; ">是否升级HP</label>
+	                <input type="checkbox" class="field size1" />
+	                <label style="margin-left: 45px; ">是否更换备件</label>
+	                <select class="field size2">
+	                  <option value="">无</option>
+	                  <option value="">库房申请</option>
+	                  <option value="">小库申请</option>
+	                  <option value="">HP提供</option>
+	                  <option value="">第三方购买</option>
+	                </select>
+	                <label style="margin-left: 45px; ">是否分享</label>
+	                <input type="checkbox" class="field size1" />
+	              </p>
+	            </div>
+	          
+	          
+	              <!-- Form Buttons -->
+	            <div class="buttons">
+	              <input type="submit" class="button" value="保存" />
+	            </div>
+	            <!-- End Form Buttons -->
+	          </form>
+	            <!-- End Form --> 
+          </div>
+            
+           
+        </div>
+        <!-- End Box --> 
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

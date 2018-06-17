@@ -1,0 +1,68 @@
+{% load staticfiles %}
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{% block title %}jihua{% endblock %}</title>
+<link rel="stylesheet" href="{% static 'css/webstyle.css' %}">
+<link rel="stylesheet" href="{% static 'css/jihuastyle.css' %}">
+<link rel="stylesheet" href="{% static 'css/jihuastyle_input.css' %}">
+<link rel="stylesheet" href="{% static 'css/jquery-ui.min.css' %}">
+<link rel="stylesheet" href="{% static 'js/kindeditor-4.1.11-zh-CN/themes/default/default.css' %}">
+<script type="text/javascript" src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery-ui.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/kindeditor-4.1.11-zh-CN/kindeditor-all-min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/kindeditor-4.1.11-zh-CN/lang/zh-CN.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/kindeditor-4.1.11-zh-CN/config.js' %}"></script>
+<!-- <script type="text/javascript" src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
+<script type="text/javascript" src="{% static 'ckeditor/ckeditor-init.js' %}"></script> -->
+
+<script>
+	$(function(){
+		$('#id_date').datepicker({dateFormat:'yy-mm-dd',
+								changeMonth:true,
+								changeYear:true
+	});
+	});
+</script>
+<!-- <script>
+
+        KindEditor.ready(function(K) {
+                K.create('#id_solution', {
+                       resizeType:0,
+                       allowFlashUpload:false,
+                       allowMediaUpload:false,
+                       uploadJson : '/upload/kindeditor',
+                });
+        });
+</script>
+
+ -->
+<body>
+{% include 'head_nav.html' %}
+
+	
+<div class="main">
+		{% include 'body_nav.html' %}
+		<div class="main_l">
+			<div class="main_l_r">
+
+				{% block ribao_nav %}
+				{% endblock ribao_nav %}
+
+				{% block ribao %}
+				{% endblock ribao %}
+
+				{% block content %}
+				{% endblock content %}
+
+				{% block paginator %}
+				{% endblock paginator %}
+
+			</div>
+			
+		</div>
+</div>
+
+</body>
+</html>

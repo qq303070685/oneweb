@@ -1,0 +1,29 @@
+.main .main_l_r .jihua_m_s {
+	width: 1160px;
+	height: 50px;
+	margin-bottom: 15px;
+	box-shadow: 0 3px 8px rgba(0,0, 0, 0.3);
+	background: #ffffff;
+	border-radius: 6px;
+}
+
+.main .main_l_r .jihua_m_s h3{ float: left;display: inline-block;line-height: 50px; margin-left: 20px;}
+.main .main_l_r .jihua_m_s h5{ float: left;display: inline-block;line-height: 50px; margin-left: 20px;}
+.main .main_l_r .jihua_m_s .sort{ float: left;display: inline-block;line-height: 50px; margin-left: 65px;}
+.main .main_l_r .jihua_m_s .sort .field{ width: 80px; height: 30px; margin-left: 3px;}
+.main .main_l_r .jihua_m_s img{ float: right; display: inline-block; margin-right: 40px; margin-top: 9px;}
+
+.main .main_l_r .jihua_m_x {
+	width: 1160px;
+	height: 440px;
+	margin-bottom: 15px;
+	box-shadow: 0 3px 8px rgba(0,0, 0, 0.3);
+	background: #ffffff;
+	border-radius: 6px;
+}
+.main .main_l_r .jihua_m_x .table{ width:1160px;font-size: 11px; border-collapse: collapse;border:1px solid #818181;}
+.main .main_l_r .jihua_m_x .table .table_con{color:  #000000;}
+.main .main_l_r .jihua_m_x th{ background: #b5cfd2; border: 1px solid #818181;text-align: left;padding: 8px 4px; }
+.main .main_l_r .jihua_m_x td{ width:25px;background: #e0e0e0; border-bottom: 1px solid #818181; font-size: 13px; padding: 8px 4px; }
+.main .main_l_r .jihua_m_x table tr:hover .main .main_l_r .jihua_m_x table td{ background: #b5cfd2;}
+
